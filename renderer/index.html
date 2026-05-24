@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Seyamii Slate</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Doto:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───────── DEFAULT (Creative) THEME ───────── */
+  :root,
+  body[data-theme="creative"]{
+    --bg-desk:        #ece8de;
+    --desk-grad-a:    #e9e3d2;
+    --desk-grad-b:    #ddd5be;
+    --desk-glow-a:    #f3eee0;
+    --desk-glow-b:    #e6dfcd;
+
+    --bg:             #faf9f5;
+    --bg-2:           #f3f0e7;
+    --bg-3:           #ebe7da;
+
+    --surf-card:      #ffffff;
+    --surf-elevated:  #fbf9f3;
+    --surf-feed-a:    #fdfcf7;
+    --surf-feed-b:    #f7f3e8;
+    --surf-main-a:    #faf9f5;
+    --surf-main-b:    #f4f1e7;
+    --surf-chip:      #ece8de;
+    --surf-chip-thumb:#faf9f5;
+    --surf-track:     #e1ddd0;
+    --surf-track-2:   #ebe7d8;
+    --surf-dropzone:  #fdfcf8;
+    --inactive:       #d8d3c4;
+    --inactive-2:     #cdc8b8;
+    --inactive-fg:    #a39e8f;
+
+    --ink:            #1f1e1b;
+    --ink-2:          #3d3a33;
+    --ink-3:          #6b6760;
+    --ink-4:          #97938a;
+    --on-accent:      #ffffff;
+
+    --line:           rgba(31,30,27,0.09);
+    --line-2:         rgba(31,30,27,0.16);
+    --line-strong:    rgba(31,30,27,0.22);
+
+    --accent:         #c8643c;
+    --ok:             #5b7a4a;
+    --ok-ink:         #3d5230;
+    --warn:           #b8842e;
+    --err:            #b5552c;
+
+    --chrome-a:       #f6f3ea;
+    --chrome-b:       #efebde;
+    --traffic-r:      #ff5f57;
+    --traffic-y:      #febc2e;
+    --traffic-g:      #28c840;
+
+    --button-ghost-bg: rgba(255,255,255,0.6);
+    --button-ghost-bg-active: #ffffff;
+
+    --setup-glow:     #faf6e8;
+    --window-shadow-a: rgba(31,30,27,0.22);
+    --window-shadow-b: rgba(31,30,27,0.45);
+    --window-shadow-c: rgba(31,30,27,0.18);
+    --window-radius:  14px;
+    --card-radius:    12px;
+    --chip-radius:    9px;
+
+    --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+    --display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+    --sans: "Geist", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --mono: "Geist Mono", "SF Mono", ui-monospace, Menlo, monospace;
+  }
+
+  /* ───────── CREATIVE DARK ───────── */
+  body[data-theme="creative-dark"]{
+    --bg-desk:        #16140f;
+    --desk-grad-a:    #1f1c14;
+    --desk-grad-b:    #14110b;
+    --desk-glow-a:    #2a2419;
+    --desk-glow-b:    #1d1a12;
+
+    --bg:             #24211a;
+    --bg-2:           #2c281e;
+    --bg-3:           #322e23;
+
+    --surf-card:      #2f2b20;
+    --surf-elevated:  #292519;
+    --surf-feed-a:    #2c281d;
+    --surf-feed-b:    #211e15;
+    --surf-main-a:    #25221a;
+    --surf-main-b:    #1d1a12;
+    --surf-chip:      #322e23;
+    --surf-chip-thumb:#3d382a;
+    --surf-track:     #36322a;
+    --surf-track-2:   #2e2a20;
+    --surf-dropzone:  #25221a;
+    --inactive:       #44402f;
+    --inactive-2:     #524d3a;
+    --inactive-fg:    #807a64;
+
+    --ink:            #f0ebda;
+    --ink-2:          #d2cbb4;
+    --ink-3:          #9a9580;
+    --ink-4:          #6d695a;
+    --on-accent:      #1a1610;
+
+    --line:           rgba(240,235,218,0.08);
+    --line-2:         rgba(240,235,218,0.16);
+    --line-strong:    rgba(240,235,218,0.26);
+
+    --accent:         #e8a075;
+    --ok:             #8aaa6f;
+    --ok-ink:         #b8d099;
+    --warn:           #d9a85e;
+    --err:            #de8a64;
+
+    --chrome-a:       #2a261c;
+    --chrome-b:       #221f17;
+    --traffic-r:      #ff5f57;
+    --traffic-y:      #febc2e;
+    --traffic-g:      #28c840;
+
+    --button-ghost-bg: rgba(255,255,255,0.04);
+    --button-ghost-bg-active: rgba(255,255,255,0.08);
+
+    --setup-glow:     #34301f;
+    --window-shadow-a: rgba(0,0,0,0.6);
+    --window-shadow-b: rgba(0,0,0,0.7);
+    --window-shadow-c: rgba(0,0,0,0.4);
+  }
+
+  /* ───────── NOTHING LIGHT ───────── */
+  body[data-theme="nothing-light"]{
+    --bg-desk:        #d8d8d8;
+    --desk-grad-a:    #d8d8d8;
+    --desk-grad-b:    #c4c4c4;
+    --desk-glow-a:    #e6e6e6;
+    --desk-glow-b:    #d0d0d0;
+
+    --bg:             #f4f4f4;
+    --bg-2:           #ededed;
+    --bg-3:           #e0e0e0;
+
+    --surf-card:      #ffffff;
+    --surf-elevated:  #fafafa;
+    --surf-feed-a:    #fafafa;
+    --surf-feed-b:    #f0f0f0;
+    --surf-main-a:    #f4f4f4;
+    --surf-main-b:    #eaeaea;
+    --surf-chip:      #e4e4e4;
+    --surf-chip-thumb:#ffffff;
+    --surf-track:     #d6d6d6;
+    --surf-track-2:   #dcdcdc;
+    --surf-dropzone:  #f8f8f8;
+    --inactive:       #c4c4c4;
+    --inactive-2:     #b0b0b0;
+    --inactive-fg:    #888888;
+
+    --ink:            #0a0a0a;
+    --ink-2:          #1f1f1f;
+    --ink-3:          #555555;
+    --ink-4:          #8c8c8c;
+    --on-accent:      #ffffff;
+
+    --line:           rgba(0,0,0,0.08);
+    --line-2:         rgba(0,0,0,0.16);
+    --line-strong:    rgba(0,0,0,0.32);
+
+    --accent:         #d12015;
+    --ok:             #0a8e3a;
+    --ok-ink:         #0a6028;
+    --warn:           #c47100;
+    --err:            #d12015;
+
+    --chrome-a:       #f0f0f0;
+    --chrome-b:       #e4e4e4;
+    --traffic-r:      #000000;
+    --traffic-y:      #000000;
+    --traffic-g:      #000000;
+
+    --button-ghost-bg: rgba(255,255,255,0.8);
+    --button-ghost-bg-active: #ffffff;
+
+    --setup-glow:     #ededed;
+    --window-shadow-a: rgba(0,0,0,0.16);
+    --window-shadow-b: rgba(0,0,0,0.28);
+    --window-shadow-c: rgba(0,0,0,0.12);
+    --window-radius:  4px;
+    --card-radius:    4px;
+    --chip-radius:    2px;
+
+    --serif:  "Doto", "JetBrains Mono", "Geist Mono", monospace;
+    --display:"Doto", "JetBrains Mono", "Geist Mono", monospace;
+    --sans:   "JetBrains Mono", "Geist Mono", "SF Mono", ui-monospace, monospace;
+    --mono:   "JetBrains Mono", "Geist Mono", "SF Mono", ui-monospace, monospace;
+  }
+
+  /* ───────── NOTHING DARK ───────── */
+  body[data-theme="nothing-dark"]{
+    --bg-desk:        #050505;
+    --desk-grad-a:    #0a0a0a;
+    --desk-grad-b:    #000000;
+    --desk-glow-a:    #141414;
+    --desk-glow-b:    #0a0a0a;
+
+    --bg:             #0c0c0c;
+    --bg-2:           #141414;
+    --bg-3:           #1a1a1a;
+
+    --surf-card:      #181818;
+    --surf-elevated:  #121212;
+    --surf-feed-a:    #161616;
+    --surf-feed-b:    #0c0c0c;
+    --surf-main-a:    #0e0e0e;
+    --surf-main-b:    #050505;
+    --surf-chip:      #1c1c1c;
+    --surf-chip-thumb:#2c2c2c;
+    --surf-track:     #1f1f1f;
+    --surf-track-2:   #181818;
+    --surf-dropzone:  #0e0e0e;
+    --inactive:       #2a2a2a;
+    --inactive-2:     #383838;
+    --inactive-fg:    #666666;
+
+    --ink:            #ffffff;
+    --ink-2:          #e6e6e6;
+    --ink-3:          #999999;
+    --ink-4:          #5f5f5f;
+    --on-accent:      #ffffff;
+
+    --line:           rgba(255,255,255,0.08);
+    --line-2:         rgba(255,255,255,0.16);
+    --line-strong:    rgba(255,255,255,0.32);
+
+    --accent:         #d12015;
+    --ok:             #2dd25e;
+    --ok-ink:         #6ee08f;
+    --warn:           #f0a040;
+    --err:            #d12015;
+
+    --chrome-a:       #161616;
+    --chrome-b:       #0c0c0c;
+    --traffic-r:      #ffffff;
+    --traffic-y:      #ffffff;
+    --traffic-g:      #ffffff;
+
+    --button-ghost-bg: rgba(255,255,255,0.06);
+    --button-ghost-bg-active: rgba(255,255,255,0.14);
+
+    --setup-glow:     #1c1c1c;
+    --window-shadow-a: rgba(0,0,0,0.7);
+    --window-shadow-b: rgba(0,0,0,0.8);
+    --window-shadow-c: rgba(0,0,0,0.5);
+    --window-radius:  4px;
+    --card-radius:    4px;
+    --chip-radius:    2px;
+
+    --serif:  "Doto", "JetBrains Mono", "Geist Mono", monospace;
+    --display:"Doto", "JetBrains Mono", "Geist Mono", monospace;
+    --sans:   "JetBrains Mono", "Geist Mono", "SF Mono", ui-monospace, monospace;
+    --mono:   "JetBrains Mono", "Geist Mono", "SF Mono", ui-monospace, monospace;
+  }
+
+  /* ───────── BASE LAYOUT ───────── */
+  html,body{margin:0;padding:0;height:100%;background:var(--bg-desk);font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+  body{
+    background:
+      radial-gradient(1200px 800px at 18% 8%, var(--desk-glow-a) 0%, transparent 60%),
+      radial-gradient(900px 700px at 88% 92%, var(--desk-glow-b) 0%, transparent 55%),
+      linear-gradient(180deg, var(--desk-grad-a) 0%, var(--desk-grad-b) 100%);
+    min-height:100%;
+    display:flex;align-items:center;justify-content:center;
+    box-sizing:border-box;overflow:hidden;
+  }
+  /* Nothing themes — flat backgrounds with dot grid */
+  body[data-theme="nothing-light"],
+  body[data-theme="nothing-dark"]{
+    background:
+      radial-gradient(circle at 1px 1px, var(--line-2) 1px, transparent 0) 0 0 / 24px 24px,
+      linear-gradient(180deg, var(--desk-grad-a) 0%, var(--desk-grad-b) 100%);
+  }
+  #stage{position:fixed;inset:0;}
+  #fit{width:100%;height:100%;}
+  *{box-sizing:border-box;}
+
+  /* Doto sizing — Nothing-themed display headlines */
+  body[data-theme="nothing-light"] .nothing-display,
+  body[data-theme="nothing-dark"] .nothing-display{
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: 0 !important;
+    font-variation-settings: "ROND" 100;
+  }
+
+  /* Italics flatten in Nothing themes */
+  body[data-theme="nothing-light"] em,
+  body[data-theme="nothing-dark"] em{ font-style: normal !important; }
+</style>
+</head>
+<body data-theme="creative">
+<template id="__bundler_thumbnail" data-bg-color="#ece8de">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="200" y="180" width="800" height="440" rx="28" fill="#faf9f5" stroke="#1f1e1b" stroke-opacity="0.15" stroke-width="2"/>
+    <rect x="200" y="180" width="800" height="56" rx="28" fill="#efebde"/>
+    <rect x="200" y="232" width="800" height="2" fill="#1f1e1b" fill-opacity="0.1"/>
+    <circle cx="240" cy="208" r="9" fill="#ff5f57"/>
+    <circle cx="268" cy="208" r="9" fill="#febc2e"/>
+    <circle cx="296" cy="208" r="9" fill="#28c840"/>
+    <g transform="translate(540 360)">
+      <g>
+        <rect x="-4" y="-60" width="8" height="120" rx="4" fill="#c8643c"/>
+        <rect x="-30" y="-40" width="8" height="80" rx="4" fill="#c8643c" opacity="0.55"/>
+        <rect x="-56" y="-25" width="8" height="50" rx="4" fill="#c8643c" opacity="0.35"/>
+        <rect x="22" y="-46" width="8" height="92" rx="4" fill="#c8643c" opacity="0.7"/>
+        <rect x="48" y="-30" width="8" height="60" rx="4" fill="#c8643c" opacity="0.45"/>
+        <rect x="74" y="-18" width="8" height="36" rx="4" fill="#c8643c" opacity="0.3"/>
+      </g>
+    </g>
+    <text x="600" y="520" font-family="Georgia, serif" font-size="44" fill="#1f1e1b" text-anchor="middle">Seyamii Slate</text>
+    <text x="600" y="556" font-family="Helvetica, sans-serif" font-size="16" fill="#1f1e1b" fill-opacity="0.5" text-anchor="middle" letter-spacing="2">WORD-BY-WORD · FOR PREMIERE</text>
+  </svg>
+</template>
+<div id="root"></div>
+
+
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+<script type="text/babel" src="screen-main.jsx"></script>
+<script type="text/babel" src="screen-transcribing.jsx"></script>
+<script type="text/babel" src="screen-done.jsx"></script>
+<script type="text/babel" src="sheets.jsx"></script>
+<script src="bridge.js"></script>
+<script type="text/babel" src="main.jsx"></script>
+</body>
+</html>

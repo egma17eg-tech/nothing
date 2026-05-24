@@ -1,0 +1,42 @@
+{
+  "name": "seyamii-slate",
+  "version": "1.0.0",
+  "productName": "Seyamii Slate",
+  "description": "Word-by-word transcription for Premiere Pro",
+  "main": "main.js",
+  "author": "Seyamii",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^42.2.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.seyamii.slate",
+    "productName": "Seyamii Slate",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**",
+      "backend/**",
+      "assets/**"
+    ]
+  }
+}
